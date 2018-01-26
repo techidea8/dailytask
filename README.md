@@ -3,7 +3,7 @@
 
 1、支持多个清单切换
 
-！[任务列表](https://raw.githubusercontent.com/techidea8/dailytask/master/1.jpg)
+！[任务列表](https://github.com/techidea8/dailytask/raw/master/1.jpg)
 2、支持消息发布
 和自定义面板
 ！[任务列表](https://raw.githubusercontent.com/techidea8/dailytask/master/2.jpg)
