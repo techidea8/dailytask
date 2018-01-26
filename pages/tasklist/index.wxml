@@ -1,0 +1,43 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+<view class="page__bd">
+ <swiper 
+  
+  style="height:{{height}}px"
+  indicator-dots="true"
+  circular="true"
+  bindchange="changepanel"
+  >
+  <block wx:for="{{panels}}" wx:for-item="panel">
+    <swiper-item   >
+      <view class="taskpanel"  >
+        <view class="weui-cells__title" wx:if="{{tasks.length>0}}">待完成任务(长按可删除)</view>
+        <view class="weui-cells__title" wx:if="{{tasks.length==0}}">待完成任务(请先添加任务)</view>
+            <view class="weui-cells weui-cells_after-title">
+                <radio-group bindchange="radioChange">
+                    <label   bindlongtap="completetask"  class="weui-cell weui-check__label"
+                     wx:for="{{tasks}}" wx:key="value" wx:if="{{item.stat=='IDLE' && item.panel==panel.value}}">
+                        <radio    class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
+                        <view class="weui-cell__bd" data-id="{{item.id}}" >{{item.name}}</view>
+                        <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                            <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                        </view>
+                    </label>
+                </radio-group>
+              
+    </view>
+       <view class="weui-cells__title">已完成任务</view>
+            <view class="weui-cells weui-cells_after-title">
+                <radio-group bindchange="radioChange">
+                    <label    bindlongtap="deletepanel"  class="weui-cell weui-check__label completed"
+                     wx:for="{{tasks}}" wx:key="value"  wx:if="{{item.stat!='IDLE' && item.panel==panel.value}}">
+                        <view class="weui-cell__bd" data-id="{{item.value}}" >{{item.name}}</view>
+                    </label>
+                </radio-group>
+              
+    </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>
+</view>
+</view>

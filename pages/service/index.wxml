@@ -1,0 +1,40 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+   
+    <view class="page__bd">
+      
+        <view class="weui-cells weui-cells_after-title">
+             <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea value="{{content}}" class="weui-textarea" placeholder="这里描述一下问题" bindinput="updatetaskname" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">{{content.length}}/140</view>
+                </view>
+            </view>
+        </view>
+
+       
+
+
+        <view class="weui-grids">
+           
+           
+            <block >
+               <button  class="weui-grid" bindtap="submitquestion"   hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/assets/images/fabu.png" />
+                    <view class="weui-grid__label">提交</view>
+                </button>
+            </block>
+             <block >
+                   <button  class="weui-grid" open-type="contact" session-from="weapp"   hover-class="weui-grid_active">
+                    <image class="weui-grid__icon"  src="/assets/images/wechat.png" />
+                    <view class="weui-grid__label" >客服</view>
+                    </button>
+            </block>
+
+            
+
+
+            
+        </view>
+
+    </view>
+</view>

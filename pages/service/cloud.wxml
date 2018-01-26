@@ -1,0 +1,30 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+   
+    <view class="page__bd">
+
+        <view class="weui-grids">
+            
+            <block >
+                <navigator url="/pages/book/index" class="weui-grid" hover-class="weui-grid_active">
+                    <view class="weui-grid__label">2500</view>
+                    <view class="weui-grid__label">上传(次)</view>
+                </navigator>
+            </block>
+            <block >
+                <navigator url="/pages/book/index" class="weui-grid" hover-class="weui-grid_active">
+                    <view class="weui-grid__label">2500</view>
+                    <view class="weui-grid__label">下载(次)</view>
+                </navigator>
+            </block>
+
+            <block >
+                <navigator url="/pages/book/index" class="weui-grid" hover-class="weui-grid_active">
+                    <view class="weui-grid__label">2500</view>
+                    <view class="weui-grid__label">使用时间(小时)</view>
+                </navigator>
+            </block>
+
+        </view>
+
+    </view>
+</view>

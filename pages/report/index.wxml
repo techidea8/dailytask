@@ -1,0 +1,37 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+   
+    <view class="page__bd">
+
+        <view class="weui-grids">
+       
+            
+                <view class="weui-grid" hover-class="weui-grid_active">
+                    <view class="weui-grid__label">2500</view>
+                    <view class="weui-grid__label">累计任务</view>
+                </view>
+            
+          
+                <view  class="weui-grid" hover-class="weui-grid_active">
+                    <view class="weui-grid__label">2500</view>
+                    <view class="weui-grid__label">已完成</view>
+                </view>
+
+                <view  class="weui-grid" hover-class="weui-grid_active">
+                    <view class="weui-grid__label">2500</view>
+                    <view class="weui-grid__label">未完成</view>
+                </view>
+            
+
+            
+            
+           
+                <view  class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/assets/images/more2.png" />
+                    <view class="weui-grid__label">更多</view>
+                </view>
+ 
+
+        </view>
+
+    </view>
+</view>

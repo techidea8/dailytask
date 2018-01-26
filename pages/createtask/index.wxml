@@ -1,0 +1,92 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+   
+    <view class="page__bd">
+      <navigator url="/pages/panel/index"  >
+       <view class="weui-cell weui-cell_access">
+       
+                <view class="weui-cell__bd">
+
+                    <view style="display: inline-block; vertical-align: middle">{{panel.name}}</view>
+                    
+                </view>
+                <view class="weui-cell__ft weui-cell__ft_in-access">切换看板</view>
+        
+        </view>
+        </navigator>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea value="{{content}}" class="weui-textarea" placeholder="这里描述一下任务" bindinput="updatetaskname" style="height: 3.3em" />
+                    <view class="weui-textarea-counter">{{content.length}}/140</view>
+                </view>
+            </view>
+        </view>
+
+       
+
+        <view class="weui-cells weui-cells_after-title" wx:if="{{showmore}}">
+           
+              <view class="weui-cell weui-cell_select">
+                  <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                      <view class="weui-label">紧急程度</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                      <picker bindchange="bindprioritychange" value="{{priorityIndex}}" range="{{prioritys}}">
+                          <view class="weui-select weui-select_in-select-after">{{prioritys[priorityIndex]}}</view>
+                      </picker>
+                  </view>
+              </view>
+              <view class="weui-cell weui-cell_input">
+                  <view class="weui-cell__hd">
+                      <view class="weui-label">截止日期</view>
+                  </view>
+                  <view class="weui-cell__bd">
+                      <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
+                          <view class="weui-input">{{date}}</view>
+                      </picker>
+                  </view>
+              </view>
+
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">截止时间</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+                        <view class="weui-input">{{time}}</view>
+                    </picker>
+                </view>
+            </view>
+            <!--
+            <view class="weui-cells weui-cells_after-title">
+              <view class="weui-cell weui-cell_switch">
+                  <view class="weui-cell__bd">每天自动生成</view>
+                  <view class="weui-cell__ft">
+                      <switch checked />
+                  </view>
+              </view>
+              </view>
+            -->
+
+        </view>
+
+        <view class="weui-grids">
+           
+           
+            <block >
+                <view bindtap="createtask"  class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="/assets/images/fabu.png" />
+                    <view class="weui-grid__label">发布</view>
+                </view>
+            </block>
+             <block >
+                <view  class="weui-grid" bindtap="showmoreornot" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" wx:if="{{!haschange}}" src="{{images.more0}}" />
+                    <image class="weui-grid__icon" wx:if="{{haschange}}" src="{{images.more1}}" />
+                    <view class="weui-grid__label">更多</view>
+                </view>
+            </block>
+        </view>
+
+    </view>
+</view>

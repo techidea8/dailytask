@@ -1,0 +1,18 @@
+.taskpanel{
+  width: 100%;
+  height: 100%;
+}
+page{height:100%}
+swiper{height:1024px}
+swiper-item{
+  height:100%;
+}
+.page__bd {
+padding-bottom:0px;
+}
+.completed{
+  text-decoration:line-through;/*文字排版--删除线*/
+  color: #607B8B;
+   font-style:oblique;
+   font-size: 12px;
+}

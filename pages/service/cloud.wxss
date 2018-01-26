@@ -1,0 +1,11 @@
+.weui-grid {
+padding:2px 1px;
+border-bottom: none;
+  border-top: none;
+  border:none;
+}
+.weui-grids {
+  border-bottom: none;
+  border-top: none;
+  border:none;
+}
